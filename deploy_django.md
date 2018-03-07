@@ -1,7 +1,29 @@
+Prerequisites
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+```
+
 1. Installing Python3.6
     > According to https://tecadmin.net/install-python-3-6-ubuntu-linuxmint/#
+    ```bash
+    apt-get install build-essential checkinstall
+    apt-get install libreadline-gplv2-dev  libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+    cd /usr/src
+    wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tgz
+    tar xzf Python-3.6.4.tgz
+    cd Python-3.6.4
+    ./configure --enable-optimizations
+    make altinstall
+    cd .. $$ rm Python-3.6.4.tgz
+    ```
+
 2. Setting Up environment and Apache2
     > According to https://github.com/codingforentrepreneurs/Guides/blob/master/all/Debian_Install_Django_Apache2.md
+    ```bash
+    apt-get install apache2
+    apt-get install python-pip python-virtualenv python-setuptools python-dev build-essentialapt-get install libapache2-mod-wsgi-py3
+    ```
 
 3. Installing PostgreSQL
     > According to https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04
@@ -21,6 +43,7 @@
     ```bash
     nano /etc/apache2/sites-available/000-default.conf
     ```
+
 5. Change configuration as follows
     ```xml
     <VirtualHost *:80>
@@ -59,4 +82,3 @@
     ```bash
     apachectl restart
     ```
-

@@ -29,14 +29,12 @@ sudo apt-get upgrade
     > According to https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04
     ```bash
     apt-get install postgresql postgresql-contrib
-    sudo -i -u postgres
-    createuser --interactive
-    createdb username_above
-    psql
-    ALTER ROLE username WITH ENCRYPTED PASSWORD 'new_password';
-    CREATE DATABASE dbname WITH OWNER username_above;
+    sudo -u postgres createuser <username>
+    sudo -u postgres createdb <dbname>
+    sudo -u postgres psql
+    psql=# ALTER USER <username> WITH ENCRYPTED PASSWORD '<new_password>';
+    psql=# GRANT ALL PRIVILEGES ON DATABASE <dbname> TO <username> ;
     \q
-    exit
     ```
 
 4. Change Apache Settings

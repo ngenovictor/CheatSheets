@@ -1,1 +1,3 @@
-1. [Deploying a Django Application on Linode](deploy_django.md)
+## My Step by Step Guide for how I normally do things
+
+1. [Deploying a Django Application on Remote Server](deploy_django.md)

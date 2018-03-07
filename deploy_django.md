@@ -6,19 +6,21 @@
 3. Installing PostgreSQL
     According to https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04
     ```bash
-    apt-get install postgresql postgresql-contrib
-    sudo -i -u postgres
-    createuser --interactive
-    createdb username_above
-    psql
-    ALTER ROLE username WITH ENCRYPTED PASSWORD 'new_password';
-    CREATE DATABASE dbname WITH OWNER username_above;
-    \q
-    exit
+    $ apt-get install postgresql postgresql-contrib
+    $ sudo -i -u postgres
+    $ createuser --interactive
+    $ createdb username_above
+    $ psql
+    $ ALTER ROLE username WITH ENCRYPTED PASSWORD 'new_password';
+    $ CREATE DATABASE dbname WITH OWNER username_above;
+    $ \q
+    $ exit
     ```
 
 4. Change Apache Settings
-    nano /etc/apache2/sites-available/000-default.conf
+    ```bash
+    $ nano /etc/apache2/sites-available/000-default.conf
+    ```
 5. Change configuration as follows
     ```xml
     <VirtualHost *:80>
@@ -47,10 +49,14 @@
     ```
 
 6. Add User Permissions 
-    adduser $USER www-data
-    chown www-data:www-data /var/www/project_dir/django_project/
-    chmod -R 775 /var/www/project_dir/env/
+    ```bash
+    $ adduser $USER www-data
+    $ chown www-data:www-data /var/www/project_dir/django_project/
+    $ chmod -R 775 /var/www/project_dir/env/
+    ```
 
 7. Restart Apache
-    apachectl restart
+    ```bash
+    $ apachectl restart
+    ```
 

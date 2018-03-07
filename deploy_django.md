@@ -18,6 +18,7 @@
 4. Change Apache Settings
     nano /etc/apache2/sites-available/000-default.conf
 5. Change configuration as follows
+    ```xml
     <VirtualHost *:80>
         ServerName localhost
         ServerAdmin webmaster@localhost
@@ -41,6 +42,7 @@
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
     </VirtualHost>
+    ```
 
 6. Add User Permissions 
     adduser $USER www-data

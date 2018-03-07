@@ -1,10 +1,10 @@
 1. Installing Python3.6
-    According to https://tecadmin.net/install-python-3-6-ubuntu-linuxmint/#
+    > According to https://tecadmin.net/install-python-3-6-ubuntu-linuxmint/#
 2. Setting Up environment and Apache2
-    According to https://github.com/codingforentrepreneurs/Guides/blob/master/all/Debian_Install_Django_Apache2.md
+    > According to https://github.com/codingforentrepreneurs/Guides/blob/master/all/Debian_Install_Django_Apache2.md
 
 3. Installing PostgreSQL
-    According to https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04
+    > According to https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04
     ```bash
     $ apt-get install postgresql postgresql-contrib
     $ sudo -i -u postgres

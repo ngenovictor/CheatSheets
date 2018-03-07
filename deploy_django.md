@@ -1,3 +1,8 @@
+On host machine
+```bash
+ssh-keygen -R server_ip
+ssh root@server_ip
+```
 Prerequisites
 ```bash
 sudo apt-get update
@@ -20,5 +25,5 @@ sudo apt-get upgrade
 2. Deploy with one of the following methods
 
     a.) [Deploying a Django Application on Remote Server Using Apache+mod_wsgi](deploy_django.md)
-    
+
     b.) [Deploying a Django Application on Remote Server Using Gunicorn+Nginx](deploy_django_gunicorn_nginx.md)

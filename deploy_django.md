@@ -5,15 +5,17 @@
 
 3. Installing PostgreSQL
     According to https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04
-    a.) apt-get install postgresql postgresql-contrib
-    b.) sudo -i -u postgres
-    c.) createuser --interactive
-    d.) createdb username_above
-    e.) psql
-    f.) ALTER ROLE username WITH ENCRYPTED PASSWORD 'new_password';
-    g.) CREATE DATABASE dbname WITH OWNER username_above;
-    h.) \q
-    i.) exit
+    ```bash
+    apt-get install postgresql postgresql-contrib
+    sudo -i -u postgres
+    createuser --interactive
+    createdb username_above
+    psql
+    ALTER ROLE username WITH ENCRYPTED PASSWORD 'new_password';
+    CREATE DATABASE dbname WITH OWNER username_above;
+    \q
+    exit
+    ```
 
 4. Change Apache Settings
     nano /etc/apache2/sites-available/000-default.conf

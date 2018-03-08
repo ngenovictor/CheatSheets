@@ -13,6 +13,12 @@ ssh root@server_ip
 apt-get update
 apt-get upgrade
 ```
+2. Change server time
+```bash
+date
+timedatectl set-timezone Africa/Nairobi
+date
+```
 3. Installing Python3.6
 > According to https://tecadmin.net/install-python-3-6-ubuntu-linuxmint/#
 ```bash

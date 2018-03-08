@@ -56,6 +56,7 @@ su - user
 7. Setup the application
 ```bash
 virtualenv -p python3.6 .
+source bin/activate
 git clone https://project.git
 cd project
 pip install -r requirements.txt

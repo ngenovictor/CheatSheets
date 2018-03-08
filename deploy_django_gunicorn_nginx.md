@@ -60,14 +60,15 @@ source bin/activate
 git clone https://project.git
 cd project
 pip install -r requirements.txt
-cd app_folder
+nano project/local_settings.py
+python manage.py makemigrations
 python manage.py migrate
 python manage.py collectstatic
+python manage.py test
 cd ..
 ```
 8. Configure Gunicorn
 ```bash
-pip install gunicorn
 nano bin/gunicorn_start
 ```
 9. Add the following to the file

@@ -5,8 +5,8 @@ ssh root@server_ip
 ```
 Prerequisites
 ```bash
-sudo apt-get update
-sudo apt-get upgrade
+apt-get update
+apt-get upgrade
 ```
 
 1. Installing Python3.6

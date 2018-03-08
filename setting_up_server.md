@@ -30,5 +30,5 @@ tar xzf Python-3.6.4.tgz
 cd Python-3.6.4
 ./configure --enable-optimizations
 make altinstall
-cd .. $$ rm Python-3.6.4.tgz
+cd .. && rm Python-3.6.4.tgz
 ```
